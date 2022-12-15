@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <title> Post Page</title>
+{% endblock %}
+
+{% block body %} 
+    <div style="margin-left: 200px;" class="bar-container1">
+        <br>
+        <h1 style="display: inline;color: navy;padding-left: 150px;">SIRMUSO BLOGSITE POSTS</h1>
+        <br>
+        <br>
+    </div>
+    {% for blog in blogs %}
+        <div style="margin-left: 200px;" class="general-container">
+            <div class="container-body">
+                <div style="margin-left: 110px;" class="post-container">
+                    <div  class="title-container">
+                        <h2 style="color: green;font-weight:bold;font-size: 40px;text-align: center;"> {{blog.title}}</h2>
+                    </div>
+                    <br>
+                    <br>
+                    {% for  image in pimages%}
+                        {% if image.post_id == blog.id%}
+                            <div class="contentimage">
+                                <img style="width: 100%;" src="static/postimages/{{image.name}}" alt={{image.name}}>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <br>
+                    <br>
+                    <p style="white-space: pre-wrap;font-size: 16px;text-align: left;">{{blog.content}}</p>
+                    <br>
+                    <br>
+                    <div  class="title-container">
+                        {% for  image in images%}
+                            {% if image.user_id == blog.user_id %}
+                                <img class="post-image" src="static/userimages/{{image.name}}" alt={{image.name}}>
+                            {% endif %}
+                        {% endfor %}
+                        <h1 style="font-weight:bold;color: navy;font-size: 30px;text-align: left;">{{blog.author}} </h1>
+                        <h1 class="date" style="font-weight:bold;color: navy;font-size: 30px;text-align:center;padding-left: 80px;padding-right: 120px;">{{blog.posted_at.strftime('%d-%m-%y')}} </h1>
+                        <h1 style="font-weight:bold;color: navy;font-size: 22px;padding-left:20px;"> Id : {{blog.id}} </h1>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

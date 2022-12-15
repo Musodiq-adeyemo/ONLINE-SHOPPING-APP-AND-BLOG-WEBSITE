@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+  <title>Dashboard  Page</title>
+{% endblock %}
+
+{% block body %} 
+    <div style="margin-left: 70px;width: 1200px;" class="bar-container1">
+        <h1 style="color: navy;"> Item Dashboard</h1>
+        <h3 style="color: blue;text-align: center;">Item Content</h3>
+    </div>
+    <div style="display: flex;justify-content: space-evenly;flex-wrap: wrap;" class="phone-flex">
+        <div style="width: 700px;height:auto; " class="phone-container">
+            <div  class="flex">
+                {% if image.item_id == item.id%}
+                    <div class="content-image2">
+                        <img src="static/itemimages/{{image.name}}" alt={{image.name}}>
+                    </div>
+                {% endif %}
+
+                <div class="content2">
+                    <h3 style="color:red ;">item_id : {{item.id}}</h3>
+                    <h3>{{item.name}}</h3>
+                    <h3>{{item.barcode}}</h3>
+                    <h3>{{item.prod_date.strftime('%d-%m-%y')}}</h3>
+                    <h3 style="color:red ;">${{item.price}}0</h3>
+                    <h3 style="color:blueviolet ;">Store_id : {{item.store_id}}0</h3>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Description</h2>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+    </div>
+    
+     
+{% endblock %}
