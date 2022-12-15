@@ -230,7 +230,7 @@ This file contains the route for all the endpoints for the blog post which conta
 The routes are for:
 ### get_all
 ### show_post
-### cretae_post
+### create_post
 ### update_post
 ### delete_post
 ### get_title
@@ -242,6 +242,8 @@ This file contains the APIRouter used for the endpoints, tags, and prefix.
 This file contains the route for all the endpoints for the users which contained all the called endpoints functions from the user.py in the repository folder.
 The routes are for:
 ### create_user
+### update_user
+### delete_user
 ### get_all_user
 ### get_user
 ### get_username
@@ -254,7 +256,7 @@ The routes are for:
 ### get_all_item
 ### show_item_id
 ### show_item_name
-### cretae_item
+### create_item
 ### update_item
 ### delete_item
 ### upload
@@ -267,7 +269,7 @@ The routes are for:
 ### show_store
 ### show_store_id
 ### show_store_name
-### cretae_store
+### create_store
 ### update_store
 ### delete_store
 
@@ -284,7 +286,7 @@ This file contains all the functions for all the endpoints for the CRUD operatio
 These functions include:
 ### get_all
 ### show_post
-### cretae_post
+### create_post
 ### update_post
 ### delete_post
 ### get_title
@@ -294,6 +296,8 @@ These functions include:
 This file contains all the functions for all the endpoints for the CRUD operations which are imported to the user.py file in the routers folder where they are called for the CRUD operations.
 These functions include:
 ### create_user
+### update_user
+### delete_user
 ### get_all_user
 ### get_user
 ### get_username
@@ -305,7 +309,7 @@ These functions include:
 ### get_all_item
 ### show_item_id
 ### show_item_name
-### cretae_item
+### create_item
 ### update_item
 ### delete_item
 
@@ -315,7 +319,7 @@ These functions include:
 ### show_store
 ### show_store_id
 ### show_store_name
-### cretae_store
+### create_store
 ### update_store
 ### delete_store
 
